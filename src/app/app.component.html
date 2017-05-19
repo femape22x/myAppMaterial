@@ -1,0 +1,97 @@
+<!-- <h1>
+  {{title}}
+</h1> -->
+<div class="container">
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group" role="group" aria-label="Third group">
+      <button md-icon-button [mdMenuTriggerFor]="menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item>
+          <md-icon>dialpad</md-icon>
+          <span>Redial</span>
+        </button>
+        <button md-menu-item disabled>
+          <md-icon>voicemail</md-icon>
+          <span>Check voicemail</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>notifications_off</md-icon>
+          <span>Disable alerts</span>
+        </button>
+      </md-menu>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="well well-sm">
+                  <form class="form-horizontal" method="post">
+                      <fieldset>
+                          <legend class="text-center header">Formulario de Personas</legend>
+
+                          <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <input id="txtNombre" name="nombre" type="text" placeholder="Nombre" 
+                                    [(ngModel)]="contacto.Nombre" class="form-control">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <input id="txtApellido" name="apellido" type="text" placeholder="Apellido" 
+                                    [(ngModel)]="contacto.apellido" class="form-control">
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <input id="txtIdent" name="ident" type="text" placeholder="Identificación" 
+                                    [(ngModel)]="contacto.identificacion" class="form-control">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <input id="txtEmail" name="email" type="text" placeholder="Correo Electrónico" 
+                                    [(ngModel)]="contacto.correo" class="form-control">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <input id="txtCelular" name="celular" type="text" placeholder="Celular" 
+                                    [(ngModel)]="contacto.celular" class="form-control">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <textarea class="form-control" id="txtDireccion" name="direccion" 
+                                    [(ngModel)]="contacto.direccion" placeholder="Dirección" rows="3"></textarea>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <div class="col-md-12 text-center">
+                                  <button type="submit" class="btn btn-primary btn-lg">Ingresar Datos</button>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  
